@@ -13,7 +13,7 @@ h1{
 #app{
     
     width:100%;
-    background-color: rgb(106, 111, 111);
+
     display:flexbox;
     justify-content: center;
     align-items: center;
@@ -31,4 +31,29 @@ button{
     margin:20px;
     border: 3px linen solid;
    
+}
+
+#buttons{
+    background-color: rgb(56, 55, 55);
+    border:5px solid black;
+    border-radius: 18px;
+    box-shadow: 3px 2px 6px ghostwhite;
+    width:600px;
+    height:100%;
+    margin:auto;
+    color:azure;
+    text-transform: uppercase;
+}
+
+#button{
+    background-color: rgb(56, 55, 55);
+    border:5px solid black;
+    border-radius: 18px;
+    box-shadow: 3px 2px 6px ghostwhite;
+    width:600px;
+    height:100%;
+    margin:auto;
+    color:beige;
+    text-transform: uppercase;
+
 }
