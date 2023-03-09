@@ -1,7 +1,9 @@
 const appElement=document.getElementById("buttons");
 const btElement=document.getElementById("button");
+
 // button one
-const buttonClap=document.createElement("button")
+const buttonClap=document.createElement("button");
+buttonClap.classList.add("cllickevent")
 appElement.append(buttonClap);
 buttonClap.addEventListener("click", audioOne)
 
@@ -13,6 +15,7 @@ function audioOne(){
 
 // button two
 const buttonHiHat=document.createElement("button")
+buttonHiHat.classList.add("cllickevent")
 appElement.append(buttonHiHat);
 buttonHiHat.addEventListener("click", audioTwo)
 
@@ -23,6 +26,7 @@ function audioTwo(){
 // button three
 
 const buttonKick=document.createElement("button")
+buttonKick.classList.add("cllickevent")
 appElement.append(buttonKick);
 buttonKick.addEventListener("click", audioThree)
 
@@ -33,6 +37,7 @@ function audioThree(){
 
 
 const buttonOpenHat=document.createElement("button")
+buttonOpenHat.classList.add("cllickevent")
 appElement.append(buttonOpenHat);
 buttonOpenHat.addEventListener("click", audioFour)
 
@@ -42,6 +47,7 @@ function audioFour(){
 }
 
 const buttonRide=document.createElement("button")
+buttonRide.classList.add("cllickevent")
 appElement.append(buttonRide);
 buttonRide.addEventListener("click", audioFive)
 
@@ -50,54 +56,68 @@ function audioFive(){
     soundFive.play()
 }
 
-let buttonSnare = document.createElement("button");
+// keydown event
 
+let buttonSnare = document.createElement("button");
+buttonSnare.textContent="a"
+buttonSnare.classList.add("keypress");
 btElement.append(buttonSnare);
-window.addEventListener("keydown", () => {
+window.addEventListener("keydown", (event) => {
     
-  let soundSix = new Audio("sounds/snare.wav")
-  soundSix.play();
+  if(event.key==="a"){
+  const soundSix = new Audio("sounds/snare.wav");
+  soundSix.play();}
 });
 
 
-/*
-let buttonSnare = document.createElement("button");
 
-btElement.append(buttonSnare);
-window.addEventListener("keydown", () => {
+let clapButton = document.createElement("button");
+
+clapButton.textContent="b"
+clapButton.classList.add("keypress");
+btElement.append(clapButton);
+window.addEventListener("keydown", (event) => {
     
-  let soundSix = new Audio("sounds/snare.wav")
-  soundSix.play();
+  if(event.key==="b"){
+  const soundSeven = new Audio("sounds/clap.wav");
+  soundSeven.play();}
 });
 
-let buttonSnare = document.createElement("button");
+let buttonOpenhat = document.createElement("button");
 
-btElement.append(buttonSnare);
-window.addEventListener("keydown", () => {
+buttonOpenHat.textContent="c"
+buttonOpenHat.classList.add("keypress");
+btElement.append(buttonOpenHat);
+window.addEventListener("keydown", (event) => {
     
-  let soundSix = new Audio("sounds/snare.wav")
-  soundSix.play();
+  if(event.key==="c"){
+  const soundEight = new Audio("sounds/Openhat.wav");
+  soundEight.play();}
 });
 
-let buttonSnare = document.createElement("button");
 
-btElement.append(buttonSnare);
-window.addEventListener("keydown", () => {
+let tinkButton = document.createElement("button");
+
+tinkButton.textContent="d";
+tinkButton.classList.add("keypress");
+btElement.append(tinkButton);
+window.addEventListener("keydown", (event) => {
     
-  let soundSix = new Audio("sounds/snare.wav")
-  soundSix.play();
+  if(event.key==="d"){
+  const soundNine = new Audio("sounds/tink.wav");
+  soundNine.play();}
 });
 
-let buttonSnare = document.createElement("button");
+let tomButton = document.createElement("button");
 
-btElement.append(buttonSnare);
-window.addEventListener("keydown", () => {
+tomButton.textContent="e"
+tomButton.classList.add("keypress");
+btElement.append(tomButton);
+window.addEventListener("keydown", (event) => {
     
-  let soundSix = new Audio("sounds/snare.wav")
-  soundSix.play();
-});*/
-
-
-document.addEventListener("keydown", (event) => console.log(event));
+  if(event.key==="e"){
+  const soundTen = new Audio("sounds/tom.wav");
+  soundTen.play();}
+});
 
 

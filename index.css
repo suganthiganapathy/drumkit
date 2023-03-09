@@ -20,7 +20,7 @@ h1{
     box-shadow: 2px 3px 5px lemonchiffon;
     
 }
-button{
+.cllickevent{
     width:75px;
     height:75px;
     background-image: linear-gradient(to right, gray,black);
@@ -32,7 +32,20 @@ button{
     border: 3px linen solid;
    
 }
+.keypress{
 
+    width:75px;
+    height:75px;
+    background-image: linear-gradient(to right, gray,black);
+   color:aliceblue;
+   font-size: 30px;
+    box-shadow: 2px 2px gray;
+    border-radius:50px;
+    background-size:cover;  
+    margin:20px;
+    border: 3px linen solid;
+   
+}
 #buttons{
     background-color: rgb(56, 55, 55);
     border:5px solid black;
